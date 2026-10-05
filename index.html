@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gabriel Baldo — desenvolvedor (Ruby/Rails, Java/Spring, Next.js/React, Python/IA). Codengage, supercota, cuts, olhaolance, Câmbio Hoje.">
+  <meta property="og:title" content="Gabriel Baldo — Dev Portfolio">
+  <meta property="og:description" content="Ruby/Rails · Java/Spring · Next.js/React · Python/IA. Codengage, supercota, cuts, olhaolance, Câmbio Hoje.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/hero.jpg">
+  <title>Gabriel Baldo — Dev Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+</head>
+<body>
+  <header class="topo">
+    <a class="logo" href="#inicio">GB<span>.dev</span></a>
+    <button id="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav id="menu">
+      <a href="#sobre">Sobre</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-texto">
+        <p class="kicker">Portfólio dev — UTFPR · Codengage</p>
+        <h1>Gabriel Baldo</h1>
+        <p class="sub">Desenvolvedor full-stack: <strong>Ruby on Rails</strong>, <strong>Java/Spring</strong>, <strong>Next.js/React</strong> e <strong>Python/IA</strong>. Do componente reutilizável ao SaaS em produção com pagamento e WhatsApp.</p>
+        <div class="cta">
+          <a class="btn primario" href="#projetos">Ver projetos</a>
+          <a class="btn" href="https://github.com/Gabriel-Baldo" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="#contato">Contato</a>
+        </div>
+        <ul class="stack-chips" aria-label="Stack principal">
+          <li>Ruby 3.3 · Rails 8</li>
+          <li>Java 21 · Spring Boot</li>
+          <li>Next.js · React</li>
+          <li>Python · FastAPI</li>
+          <li>Postgres · Docker</li>
+        </ul>
+      </div>
+      <figure class="hero-foto">
+        <img src="assets/img/hero.jpg" alt="Gabriel Baldo no evento de 10 anos da Codengage" width="900" height="1350" loading="eager">
+        <figcaption>Codengage — 10 anos · mar/2026</figcaption>
+      </figure>
+    </section>
+
+    <section id="sobre">
+      <h2>Sobre</h2>
+      <p>Sou estudante de <strong>Programação para Web (UTFPR)</strong> e trabalho como dev na <strong>Codengage</strong>. No dia a dia atuo no ecossistema <strong>supercota</strong> (Rails + IA), e nos projetos próprios vou de Java/Spring a Next.js — sempre versionado no Git e publicado na web.</p>
+      <ul class="destaques">
+        <li><strong>Front que entrega:</strong> HTML semântico, CSS responsivo Mobile First, JS puro com fetch/async, depois React.</li>
+        <li><strong>Back de verdade:</strong> APIs, webhooks (Stripe), filas, auth JWT, rate limiting, DTOs sanitizados.</li>
+        <li><strong>Engenharia aberta:</strong> prefiro validar em produção e abrir o código como prova, não só CRUD.</li>
+      </ul>
+    </section>
+
+    <section id="experiencia">
+      <h2>Experiência</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Codengage — Desenvolvedor</h3>
+          <p class="meta">Ruby · ViewComponent · Gem interna</p>
+          <p>Desenvolvimento e manutenção de componentes reutilizáveis (gem <em>CodengageViewComponents</em>), padrões de UI e qualidade com testes e lint. Visão de produto e time — <a href="#fotos">fotos do time</a>.</p>
+        </article>
+        <article class="card">
+          <h3>supercota — App Rails de cotações</h3>
+          <p class="meta">Rails 8.1 · Hotwire + Tailwind · Postgres 18 · Kamal</p>
+          <p>Alto nível: gestão de cotações com cache/filas/websockets (Solid Stack), deploy com Kamal + Docker, CI no GitHub Actions, throttling e system tests. Sem código ou dados internos aqui — só a stack pública.</p>
+        </article>
+        <article class="card">
+          <h3>supercota-ai — IA aplicada</h3>
+          <p class="meta">Python · FastAPI · RAG · workers</p>
+          <p>Alto nível: serviços de IA para cotações (busca, embeddings, filas com Celery/Redis). Integração com o Rails via APIs.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <h2>Projetos</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>CUTS — SaaS de agendamento p/ barbearias</h3>
+          <p class="meta">Java 21 · Spring Boot · Next.js · Stripe · WhatsApp</p>
+          <p>Multi-tenant por slug, pagamento com webhook robusto, WhatsApp multi-provedor sem vendor lock-in, Web Push VAPID, JWT em HttpOnly cookie. Validado em produção com barbearias reais. <em>Repositório privado — demo sob pedido.</em></p>
+        </article>
+        <article class="card">
+          <h3>olhaolance</h3>
+          <p class="meta">Java · backend + frontend + app-desktop · Docker</p>
+          <p>Plataforma em evolução com backend, frontend e app desktop orquestrados via compose. <em>Repositório privado — detalhes sob pedido.</em></p>
+        </article>
+        <article class="card">
+          <h3><a href="https://github.com/Gabriel-Baldo/moodle-workflow" target="_blank" rel="noopener">moodle-workflow</a></h3>
+          <p class="meta">Python · IA · PDF/Word · MCP</p>
+          <p>Automatiza trabalhos do Moodle: lê assignments, gera conteúdo com IA, formata e submete. Open source.</p>
+        </article>
+        <article class="card">
+          <h3><a href="https://github.com/Gabriel-Baldo/programacao-web-1" target="_blank" rel="noopener">Câmbio Hoje</a></h3>
+          <p class="meta">HTML · CSS · JS puro · BCB + CoinGecko</p>
+          <p>Conversor BRL ⇄ USD/EUR/BTC com cotação viva oficial (Banco Central + CoinGecko, sem chave). Projeto da disciplina Web 1 — 100% front estático no GitHub Pages.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="fotos">
+      <h2>Em campo — Codengage 10 anos</h2>
+      <p>Evento de março/2026. Fotos otimizadas para web a partir dos originais de ~5&nbsp;MB.</p>
+      <div class="grid fotos">
+        <figure class="card foto"><img src="assets/img/hero.jpg" alt="Gabriel Baldo — retrato no painel Codengage 10 anos" loading="lazy"><figcaption>Retrato — painel 10 anos</figcaption></figure>
+        <figure class="card foto"><img src="assets/img/equipe.jpg" alt="Time Codengage reunido no evento de 10 anos" loading="lazy"><figcaption>O time</figcaption></figure>
+        <figure class="card foto"><img src="assets/img/momento.jpg" alt="Gabriel assinando o painel comemorativo Codengage 10 anos" loading="lazy"><figcaption>Assinando o painel</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>Bora conversar sobre Rails, Spring, Next ou IA aplicada?</p>
+      <ul class="contato-lista">
+        <li>GitHub: <a href="https://github.com/Gabriel-Baldo" target="_blank" rel="noopener">github.com/Gabriel-Baldo</a></li>
+        <li>E-mail: <a href="mailto:gabriel.k.baldo@gmail.com">gabriel.k.baldo@gmail.com</a> <button id="copiar-email" type="button">copiar</button></li>
+        <li>Faculdade: <a href="https://github.com/Gabriel-Baldo/programacao-web-1" target="_blank" rel="noopener">programacao-web-1 + Câmbio Hoje</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="ano">2026</span> Gabriel Baldo — feito em HTML/CSS/JS puro, sem build.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
