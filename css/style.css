@@ -1,3 +1,5 @@
+/* Portfolio — Mobile First: a base é a experiência em telas pequenas.
+   Telas maiores ganham regras em @media (min-width: ...) no final. */
 :root {
   --bg: #0c0e12;
   --painel: #14171d;
@@ -17,7 +19,11 @@ body {
   color: var(--texto);
   font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, sans-serif;
 }
+img { max-width: 100%; height: auto; }
 a { color: var(--destaque-2); }
+a:hover { text-decoration: underline; }
+
+/* Topo */
 .topo {
   position: sticky; top: 0; z-index: 10;
   display: flex; align-items: center; justify-content: space-between;
@@ -27,47 +33,64 @@ a { color: var(--destaque-2); }
   backdrop-filter: blur(6px);
 }
 .logo { font-weight: 800; font-size: 1.2rem; color: var(--texto); text-decoration: none; }
+.logo:hover { text-decoration: none; }
 .logo span { color: var(--destaque); }
 #menu-btn {
-  display: none;
   background: var(--painel); color: var(--texto);
   border: 1px solid var(--borda); border-radius: 10px;
   padding: .4rem .7rem; font-size: 1.1rem; cursor: pointer;
 }
-#menu { display: flex; gap: 1rem; }
-#menu a { color: var(--suave); text-decoration: none; }
-#menu a:hover { color: var(--texto); }
+#menu-btn:hover { border-color: var(--destaque); }
+#menu {
+  display: none;
+  position: absolute; top: 100%; right: .8rem;
+  flex-direction: column; gap: .6rem;
+  background: var(--painel);
+  border: 1px solid var(--borda); border-radius: 12px; padding: .8rem 1rem;
+}
+#menu.aberto { display: flex; }
+#menu a { color: var(--suave); text-decoration: none; padding: .2rem 0; }
+#menu a:hover { color: var(--destaque); text-decoration: none; }
+
+/* Conteúdo */
 main { max-width: var(--max); margin: 0 auto; padding: 0 1.2rem 3rem; }
 section { padding: 2.2rem 0 0; }
 .kicker { color: var(--destaque); text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; margin: 0; }
-h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); margin: .3rem 0; line-height: 1.1; }
-h2 { font-size: 1.6rem; border-bottom: 1px solid var(--borda); padding-bottom: .4rem; }
+h1 { font-size: clamp(2rem, 8vw, 3.4rem); margin: .3rem 0; line-height: 1.1; }
+h2 { font-size: 1.4rem; border-bottom: 1px solid var(--borda); padding-bottom: .4rem; }
 .sub { color: var(--suave); max-width: 60ch; }
-.hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 2rem; align-items: center; padding-top: 2.5rem; }
+
+/* Hero empilhado no mobile */
+.hero { display: grid; grid-template-columns: 1fr; gap: 1.5rem; padding-top: 2rem; }
 .cta { display: flex; gap: .7rem; flex-wrap: wrap; margin: 1.2rem 0; }
 .btn {
   display: inline-block; padding: .6rem 1.1rem;
   border: 1px solid var(--borda); border-radius: 999px;
   color: var(--texto); text-decoration: none; background: var(--painel);
+  cursor: pointer; font-size: 1rem;
 }
+.btn:hover { border-color: var(--destaque); color: var(--destaque); text-decoration: none; }
 .btn.primario { background: var(--destaque); border-color: var(--destaque); color: #06110b; font-weight: 700; }
+.btn.primario:hover { color: #06110b; filter: brightness(1.08); }
 .stack-chips { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; list-style: none; }
 .stack-chips li { border: 1px solid var(--borda); background: var(--painel); border-radius: 999px; padding: .25rem .8rem; font-size: .85rem; color: var(--suave); }
 .hero-foto { margin: 0; }
 .hero-foto img, .foto img { width: 100%; height: auto; display: block; border-radius: var(--raio); border: 1px solid var(--borda); }
 figcaption { color: var(--suave); font-size: .85rem; margin-top: .4rem; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+
+/* Cards em 1 coluna no mobile */
+.grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
 .card {
   background: var(--painel); border: 1px solid var(--borda);
   border-radius: var(--raio); padding: 1.1rem 1.2rem;
 }
 .card h3 { margin: 0 0 .3rem; font-size: 1.1rem; }
 .card h3 a { color: var(--texto); }
+.card h3 a:hover { color: var(--destaque); }
 .meta { color: var(--destaque); font-size: .85rem; margin: 0 0 .6rem; }
-.fotos { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 .foto { padding: .6rem; }
-.destaques { padding-left: 1.1rem; }
-.destaques li { margin-bottom: .5rem; }
+#formacao ul, .destaques { padding-left: 1.1rem; }
+#formacao li, .destaques li { margin-bottom: .5rem; }
 .contato-lista { list-style: none; padding: 0; }
 .contato-lista li { margin: .4rem 0; }
 #copiar-email {
@@ -75,17 +98,39 @@ figcaption { color: var(--suave); font-size: .85rem; margin-top: .4rem; }
   background: var(--painel); color: var(--texto);
   border: 1px solid var(--borda); border-radius: 8px; padding: .2rem .6rem;
 }
+#copiar-email:hover { border-color: var(--destaque); color: var(--destaque); }
+
+/* Formulário: largura total, sem estourar a tela */
+form { max-width: 100%; }
+form div { margin-bottom: .9rem; }
+label { display: block; font-weight: 600; margin-bottom: .3rem; }
+input, textarea {
+  width: 100%; max-width: 100%;
+  padding: .6rem .8rem; font-size: 1rem; font-family: inherit;
+  color: var(--texto); background: var(--bg);
+  border: 1px solid var(--borda); border-radius: 10px;
+}
+input:focus, textarea:focus { outline: 2px solid var(--destaque); border-color: var(--destaque); }
+textarea { resize: vertical; }
+input::placeholder, textarea::placeholder { color: var(--suave); }
+
 footer { border-top: 1px solid var(--borda); text-align: center; color: var(--suave); padding: 1.2rem; }
 
-/* Mobile First: empilha no celular */
-@media (max-width: 820px) {
-  .hero { grid-template-columns: 1fr; }
-  #menu-btn { display: block; }
+/* Telas médias: 2 colunas nos cards */
+@media (min-width: 600px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .fotos { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Telas grandes: hero lado a lado + navegação inline */
+@media (min-width: 900px) {
+  h2 { font-size: 1.6rem; }
+  .hero { grid-template-columns: 1.2fr .8fr; gap: 2rem; align-items: center; padding-top: 2.5rem; }
+  #menu-btn { display: none; }
   #menu {
-    display: none;
-    position: absolute; top: 100%; right: .8rem;
-    flex-direction: column; background: var(--painel);
-    border: 1px solid var(--borda); border-radius: 12px; padding: .8rem 1rem;
+    display: flex; position: static;
+    flex-direction: row; gap: 1rem;
+    background: none; border: none; padding: 0;
   }
-  #menu.aberto { display: flex; }
+  form { max-width: 640px; }
 }

@@ -1,8 +1,17 @@
 # portfolio — Gabriel Baldo
 
+> **Aluno:** Gabriel Baldo · **Disciplina:** Programação para Web 1 (UTFPR), turma extra · **Atividade:** Projeto 1 — site pessoal (HTML → CSS → Mobile First responsivo).
+> **Site publicado:** https://Gabriel-Baldo.github.io/portfolio/ · **Etapa 1 (HTML puro):** https://Gabriel-Baldo.github.io/portfolio/etapa-1/
+
 Portfólio dev público (vai para um `.com`). Estático puro — HTML/CSS/JS, sem build — para deploy simples em qualquer hospedagem.
 
 > Este repo é o **Projeto 1 (site pessoal)** da disciplina Web 1 + portfólio carreira. O **Projeto 2 (Câmbio Hoje)** mora no repo [`cambio-hoje`](https://github.com/Gabriel-Baldo/cambio-hoje) — sem código de um dentro do outro.
+
+## Evolução por etapas (disciplina)
+
+- **Etapa 1 — HTML puro:** `etapa-1/index.html` (sem CSS/JS — verificado por grep; também marcada na tag `etapa-1-html-puro`). Nome, foto, Sobre, Formação, Experiências/Projetos, Habilidades, links, contato com `<form>`, navegação.
+- **Etapa 2 — CSS externo:** `css/style.css` (cores, tipografia, espaçamentos, bordas, links, formulário, hover).
+- **Etapa 3 — Mobile First:** base = telas pequenas (1 coluna, menu hamburger); `@media (min-width: 600px)` 2 colunas; `@media (min-width: 900px)` hero lado a lado + nav inline. Viewport configurado, sem larguras fixas, imagens com `max-width: 100%`. Evidência: DevTools em 375px / 768px / ≥1200px.
 
 ## Estrutura
 

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site pessoal de Gabriel Baldo — estudante de Programação para Web 1 (UTFPR) e desenvolvedor na Codengage. Etapa 1: somente HTML.">
+  <title>Gabriel Baldo — Site Pessoal (Etapa 1: HTML puro)</title>
+</head>
+<body>
+  <header>
+    <h1>Gabriel Baldo</h1>
+    <p>Estudante de Programação para Web 1 (UTFPR) · Desenvolvedor na Codengage</p>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="#experiencias">Experiências e projetos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="apresentacao">
+      <h2>Apresentação</h2>
+      <img src="../assets/img/hero.jpg" alt="Gabriel Baldo no evento de 10 anos da Codengage" width="450" height="675">
+      <p>Olá! Sou o <strong>Gabriel Baldo</strong>, estudante da UTFPR e desenvolvedor. Este site é a Etapa 1 do Projeto 1 da disciplina de Programação para Web: somente HTML, sem CSS nem JavaScript — o visual simples é de propósito, o foco aqui é estrutura e conteúdo.</p>
+      <p>Versão atualizada com visual completo: <a href="../index.html">voltar ao portfólio</a>.</p>
+    </section>
+
+    <section id="sobre">
+      <h2>Sobre mim</h2>
+      <p>Trabalho como dev na <strong>Codengage</strong>, no ecossistema <strong>supercota</strong> (Rails + IA). Nos projetos próprios vou de Java/Spring a Next.js — sempre versionado no Git e publicado na web.</p>
+      <p>Meus interesses: front-end acessível e responsivo, back-end com APIs e webhooks, e IA aplicada a problemas reais.</p>
+    </section>
+
+    <section id="formacao">
+      <h2>Formação acadêmica</h2>
+      <ul>
+        <li><strong>UTFPR</strong> — Programação para Web 1 (cursando): HTML, CSS, JavaScript, responsividade, HTTP/APIs, React, Git e publicação web.</li>
+        <li><strong>Estudos complementares:</strong> JavaScript (freeCodeCamp), CSS responsivo (Flexbox/Grid), Git e GitHub Pages.</li>
+      </ul>
+    </section>
+
+    <section id="experiencias">
+      <h2>Experiências, projetos e interesses</h2>
+      <article>
+        <h3>Codengage — Desenvolvedor</h3>
+        <p>Componentes reutilizáveis (gem CodengageViewComponents, Ruby/ViewComponent), padrões de UI, testes e lint.</p>
+      </article>
+      <article>
+        <h3>supercota — App Rails de cotações (alto nível)</h3>
+        <p>Gestão de cotações com Rails 8, Hotwire + Tailwind, Postgres, filas e deploy com Kamal + Docker.</p>
+      </article>
+      <article>
+        <h3>CUTS — SaaS de agendamento para barbearias</h3>
+        <p>Java/Spring + Next.js, pagamento com Stripe e WhatsApp multi-provedor. Validado em produção.</p>
+      </article>
+      <article>
+        <h3>Câmbio Hoje — Projeto 2 da disciplina</h3>
+        <p>Conversor BRL ⇄ USD/EUR/BTC com cotação viva (Banco Central + CoinGecko). Ver em <a href="https://github.com/Gabriel-Baldo/cambio-hoje">github.com/Gabriel-Baldo/cambio-hoje</a>.</p>
+      </article>
+    </section>
+
+    <section id="habilidades">
+      <h2>Habilidades e tecnologias</h2>
+      <ul>
+        <li><strong>Linguagens:</strong> Ruby, Java, JavaScript, Python, SQL</li>
+        <li><strong>Front-end:</strong> HTML semântico, CSS (Flexbox/Grid, Mobile First), React/Next.js, Hotwire, Tailwind</li>
+        <li><strong>Back-end:</strong> Rails, Spring Boot, FastAPI, JWT, webhooks, filas e jobs</li>
+        <li><strong>Dados e infra:</strong> PostgreSQL, Docker e Compose, Kamal, CI (GitHub Actions)</li>
+      </ul>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <ul>
+        <li>GitHub: <a href="https://github.com/Gabriel-Baldo">github.com/Gabriel-Baldo</a></li>
+        <li>E-mail: <a href="mailto:gabriel.k.baldo@gmail.com">gabriel.k.baldo@gmail.com</a></li>
+        <li>Projeto 2: <a href="https://github.com/Gabriel-Baldo/cambio-hoje">cambio-hoje</a></li>
+      </ul>
+      <h3>Mande uma mensagem</h3>
+      <p>Formulário de demonstração — nesta etapa não envia para servidor.</p>
+      <form action="mailto:gabriel.k.baldo@gmail.com" method="post" enctype="text/plain">
+        <div>
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+        </div>
+        <div>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Gabriel Baldo — Etapa 1 (HTML puro) do Projeto 1, Programação para Web 1 (UTFPR).</p>
+    <p><a href="../index.html">Versão atual com CSS responsivo</a></p>
+  </footer>
+</body>
+</html>
