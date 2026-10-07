@@ -2,7 +2,7 @@
 
 Portfólio dev público (vai para um `.com`). Estático puro — HTML/CSS/JS, sem build — para deploy simples em qualquer hospedagem.
 
-> Separado do repo acadêmico [`programacao-web-1`](https://github.com/Gabriel-Baldo/programacao-web-1): lá fica a versão mínima da disciplina (site-pessoal em HTML puro para avaliação). Aqui fica o portfólio carreira, completo.
+> Este repo é o **Projeto 1 (site pessoal)** da disciplina Web 1 + portfólio carreira. O **Projeto 2 (Câmbio Hoje)** mora no repo [`cambio-hoje`](https://github.com/Gabriel-Baldo/cambio-hoje) — sem código de um dentro do outro.
 
 ## Estrutura
 
