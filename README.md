@@ -14,7 +14,12 @@ Portfólio dev público (vai para um `.com`). Estático puro — HTML/CSS/JS, se
 ## Rodar local
 
 ```bash
-cd ~/portfolio && python3 -m http.server 8000
+# Com Docker (padrão dos repos — porta 8081 p/ não colidir com o cambio-hoje na 8080)
+docker compose up --build
+# http://localhost:8081
+
+# Sem Docker
+python3 -m http.server 8000
 # http://localhost:8000
 ```
 
