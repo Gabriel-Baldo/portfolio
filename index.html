@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Gabriel Baldo — desenvolvedor (Ruby/Rails, Java/Spring, Next.js/React, Python/IA). Codengage, supercota, cuts, olhaolance, Câmbio Hoje.">
+  <meta name="description" content="Gabriel Baldo — desenvolvedor full-stack (Ruby on Rails, Java/Spring, Next.js/React, Python/IA).">
   <meta property="og:title" content="Gabriel Baldo — Dev Portfolio">
-  <meta property="og:description" content="Ruby/Rails · Java/Spring · Next.js/React · Python/IA. Codengage, supercota, cuts, olhaolance, Câmbio Hoje.">
+  <meta property="og:description" content="Ruby on Rails · Java/Spring · Next.js/React · Python/IA.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/img/hero.jpg">
   <title>Gabriel Baldo — Dev Portfolio</title>
@@ -17,169 +17,160 @@
     <a class="logo" href="#inicio">GB<span>.dev</span></a>
     <button id="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
     <nav id="menu">
-      <a href="#sobre">Sobre</a>
-      <a href="#formacao">Formação</a>
-      <a href="#habilidades">Habilidades</a>
-      <a href="#experiencia">Experiência</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#fotos">Fotos</a>
-      <a href="#contato">Contato</a>
+      <a href="#sobre" data-i18n="nav.sobre">Sobre</a>
+      <a href="#formacao" data-i18n="nav.formacao">Formação</a>
+      <a href="#habilidades" data-i18n="nav.habilidades">Habilidades</a>
+      <a href="#experiencia" data-i18n="nav.experiencia">Experiência</a>
+      <a href="#projetos" data-i18n="nav.projetos">Projetos</a>
+      <a href="#contato" data-i18n="nav.contato">Contato</a>
     </nav>
+    <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="pt" aria-pressed="true" title="Português">🇧🇷 PT</button>
+      <button type="button" data-lang="en" aria-pressed="false" title="English">🇺🇸 EN</button>
+    </div>
   </header>
 
   <main id="inicio">
     <section class="hero">
       <div class="hero-texto">
-        <p class="kicker">Portfólio dev — UTFPR · Codengage</p>
+        <p class="kicker" data-i18n="hero.kicker">Portfólio dev</p>
         <h1>Gabriel Baldo</h1>
-        <p class="sub">Desenvolvedor full-stack: <strong>Ruby on Rails</strong>, <strong>Java/Spring</strong>, <strong>Next.js/React</strong> e <strong>Python/IA</strong>. Do componente reutilizável ao SaaS em produção com pagamento e WhatsApp.</p>
+        <p class="sub" data-i18n="hero.sub">Desenvolvedor full-stack: Ruby on Rails, Java/Spring, Next.js/React e Python/IA. Do componente reutilizável ao SaaS em produção com pagamentos, mensageria e integrações.</p>
         <div class="cta">
-          <a class="btn primario" href="#projetos">Ver projetos</a>
+          <a class="btn primario" href="#projetos" data-i18n="cta.projetos">Ver projetos</a>
           <a class="btn" href="https://github.com/Gabriel-Baldo" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="#contato">Contato</a>
+          <a class="btn" href="https://www.linkedin.com/in/gabriel-karlinski-baldo/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="#contato" data-i18n="cta.contato">Contato</a>
         </div>
         <ul class="stack-chips" aria-label="Stack principal">
-          <li>Ruby 3.3 · Rails 8</li>
-          <li>Java 21 · Spring Boot</li>
+          <li>Ruby · Rails</li>
+          <li>Java · Spring</li>
           <li>Next.js · React</li>
           <li>Python · FastAPI</li>
-          <li>Postgres · Docker</li>
+          <li>PostgreSQL · Docker</li>
+          <li>Kubernetes · Kafka</li>
         </ul>
       </div>
       <figure class="hero-foto">
-        <img src="assets/img/hero.jpg" alt="Gabriel Baldo no evento de 10 anos da Codengage" width="900" height="1350" loading="eager">
-        <figcaption>Codengage — 10 anos · mar/2026</figcaption>
+        <img src="assets/img/hero.jpg" alt="Gabriel Baldo" width="900" height="1350" loading="eager" data-i18n-alt="hero.alt">
       </figure>
     </section>
 
     <section id="sobre">
-      <h2>Sobre</h2>
-      <p>Sou estudante de <strong>Programação para Web (UTFPR)</strong> e trabalho como dev na <strong>Codengage</strong>. No dia a dia atuo no ecossistema <strong>supercota</strong> (Rails + IA), e nos projetos próprios vou de Java/Spring a Next.js — sempre versionado no Git e publicado na web.</p>
+      <h2 data-i18n="sobre.h2">Sobre</h2>
+      <p data-i18n="sobre.p">Sou desenvolvedor full-stack na Codengage. No dia a dia construo uma plataforma de gestão de cotações e um ERP para agências de viagens com gestão de milhas internacionais. Nos projetos próprios vou de Java/Spring a Next.js — sempre versionado no Git e publicado na web.</p>
       <ul class="destaques">
-        <li><strong>Front que entrega:</strong> HTML semântico, CSS responsivo Mobile First, JS puro com fetch/async, depois React.</li>
-        <li><strong>Back de verdade:</strong> APIs, webhooks (Stripe), filas, auth JWT, rate limiting, DTOs sanitizados.</li>
-        <li><strong>Engenharia aberta:</strong> prefiro validar em produção e abrir o código como prova, não só CRUD.</li>
+        <li data-i18n-html="sobre.li1"><strong>Front que entrega:</strong> HTML semântico, CSS responsivo Mobile First, JavaScript com fetch/async, depois React.</li>
+        <li data-i18n-html="sobre.li2"><strong>Back de verdade:</strong> MVC, APIs, webhooks, filas, auth JWT, rate limiting e DTOs sanitizados.</li>
       </ul>
     </section>
 
     <section id="formacao">
-      <h2>Formação acadêmica</h2>
+      <h2 data-i18n="formacao.h2">Formação</h2>
       <ul>
-        <li><strong>UTFPR</strong> — Programação para Web 1 (cursando): HTML, CSS, JavaScript, responsividade, HTTP/APIs, React, Git e publicação web.</li>
-        <li><strong>Estudos complementares:</strong> JavaScript (freeCodeCamp), CSS responsivo (Flexbox/Grid), Git e GitHub Pages.</li>
-        <li><strong>Na prática:</strong> desenvolvedor na Codengage — componentes reutilizáveis (Ruby/ViewComponent) e ecossistema supercota (Rails + IA).</li>
+        <li data-i18n="formacao.li1"><strong>UTFPR — Campus Dois Vizinhos.</strong> Formação superior na área de tecnologia, com ênfase em desenvolvimento de software: da base da web a frameworks modernos, bancos de dados e boas práticas de engenharia.</li>
+        <li data-i18n="formacao.li2"><strong>Aprendizado contínuo:</strong> cursos e prática em JavaScript, CSS responsivo, Git e publicação web.</li>
       </ul>
     </section>
 
     <section id="habilidades">
-      <h2>Habilidades e tecnologias</h2>
+      <h2 data-i18n="hab.h2">Habilidades e tecnologias</h2>
       <div class="grid">
         <article class="card">
-          <h3>Linguagens</h3>
+          <h3 data-i18n="hab.c1h">Linguagens</h3>
           <p>Ruby · Java · JavaScript · Python · SQL</p>
         </article>
         <article class="card">
-          <h3>Front-end</h3>
-          <p>HTML semântico · CSS (Flexbox/Grid, Mobile First) · React/Next.js · Hotwire (Turbo + Stimulus) · Tailwind</p>
+          <h3 data-i18n="hab.c2h">Front-end</h3>
+          <p data-i18n="hab.c2p">HTML semântico · CSS (Flexbox/Grid, Mobile First) · React/Next.js · Tailwind</p>
         </article>
         <article class="card">
-          <h3>Back-end</h3>
-          <p>Rails · Spring Boot · FastAPI · JWT · webhooks (Stripe) · filas e jobs</p>
+          <h3 data-i18n="hab.c3h">Back-end</h3>
+          <p data-i18n="hab.c3p">MVC · Rails · Spring Boot · FastAPI · APIs REST · JWT · webhooks · filas</p>
         </article>
         <article class="card">
-          <h3>Dados e infra</h3>
-          <p>PostgreSQL · Docker e Compose · Kamal · CI (GitHub Actions)</p>
+          <h3 data-i18n="hab.c4h">Dados e infra</h3>
+          <p data-i18n="hab.c4p">PostgreSQL · Docker · Kubernetes · Kafka · CI/CD</p>
         </article>
       </div>
     </section>
 
     <section id="experiencia">
-      <h2>Experiência</h2>
+      <h2 data-i18n="exp.h2">Experiência</h2>
       <div class="grid">
         <article class="card">
-          <h3>Codengage — Desenvolvedor</h3>
-          <p class="meta">Ruby · ViewComponent · Gem interna</p>
-          <p>Desenvolvimento e manutenção de componentes reutilizáveis (gem <em>CodengageViewComponents</em>), padrões de UI e qualidade com testes e lint. Visão de produto e time — <a href="#fotos">fotos do time</a>.</p>
+          <h3 data-i18n="exp.c1h">Codengage — Desenvolvedor full-stack</h3>
+          <p class="meta" data-i18n="exp.c1m">Ruby · Componentes reutilizáveis · Produtos web</p>
+          <p data-i18n="exp.c1p">Atuação em produtos da empresa, do componente reutilizável à regra de negócio, com testes, code review e deploy contínuo.</p>
         </article>
         <article class="card">
-          <h3>supercota — App Rails de cotações</h3>
-          <p class="meta">Rails 8.1 · Hotwire + Tailwind · Postgres 18 · Kamal</p>
-          <p>Alto nível: gestão de cotações com cache/filas/websockets (Solid Stack), deploy com Kamal + Docker, CI no GitHub Actions, throttling e system tests. Sem código ou dados internos aqui — só a stack pública.</p>
+          <h3 data-i18n="exp.c2h">Plataforma de gestão de cotações</h3>
+          <p class="meta" data-i18n="exp.c2m">Rails · Web em tempo real · Deploy conteinerizado</p>
+          <p data-i18n="exp.c2p">Sistema web para gestão de cotações com cache, filas e atualizações em tempo real, CI e deploy conteinerizado. Detalhes internos sob contrato.</p>
         </article>
         <article class="card">
-          <h3>supercota-ai — IA aplicada</h3>
-          <p class="meta">Python · FastAPI · RAG · workers</p>
-          <p>Alto nível: serviços de IA para cotações (busca, embeddings, filas com Celery/Redis). Integração com o Rails via APIs.</p>
+          <h3 data-i18n="exp.c3h">ERP para agências de viagens</h3>
+          <p class="meta" data-i18n="exp.c3m">Gestão · Milhas internacionais · Integrações</p>
+          <p data-i18n="exp.c3p">ERP com gestão de milhas internacionais: controle de saldos, regras de resgate e integrações com parceiros. Detalhes internos sob contrato.</p>
         </article>
       </div>
     </section>
 
     <section id="projetos">
-      <h2>Projetos</h2>
+      <h2 data-i18n="proj.h2">Projetos</h2>
       <div class="grid">
         <article class="card">
-          <h3>CUTS — SaaS de agendamento p/ barbearias</h3>
-          <p class="meta">Java 21 · Spring Boot · Next.js · Stripe · WhatsApp</p>
-          <p>Multi-tenant por slug, pagamento com webhook robusto, WhatsApp multi-provedor sem vendor lock-in, Web Push VAPID, JWT em HttpOnly cookie. Validado em produção com barbearias reais. <em>Repositório privado — demo sob pedido.</em></p>
+          <h3 data-i18n="proj.c1h">SaaS de agendamento para barbearias</h3>
+          <p class="meta" data-i18n="proj.c1m">Java/Spring · Next.js · Pagamentos · Mensageria</p>
+          <p data-i18n="proj.c1p">Multi-tenant, pagamento com webhooks robustos, mensageria multi-provedor, notificações push e auth segura. Validado em produção com operações reais. Repositório privado — demo sob pedido.</p>
         </article>
         <article class="card">
-          <h3>olhaolance</h3>
-          <p class="meta">Java · backend + frontend + app-desktop · Docker</p>
-          <p>Plataforma em evolução com backend, frontend e app desktop orquestrados via compose. <em>Repositório privado — detalhes sob pedido.</em></p>
+          <h3 data-i18n="proj.c2h">Plataforma de acompanhamento de lances</h3>
+          <p class="meta" data-i18n="proj.c2m">Java · Backend + frontend + desktop · Docker</p>
+          <p data-i18n="proj.c2p">Plataforma em evolução com backend, frontend e app desktop orquestrados via compose. Repositório privado — detalhes sob pedido.</p>
         </article>
         <article class="card">
-          <h3><a href="https://github.com/Gabriel-Baldo/moodle-workflow" target="_blank" rel="noopener">moodle-workflow</a></h3>
-          <p class="meta">Python · IA · PDF/Word · MCP</p>
-          <p>Automatiza trabalhos do Moodle: lê assignments, gera conteúdo com IA, formata e submete. Open source.</p>
+          <h3><a href="https://github.com/Gabriel-Baldo/moodle-workflow" target="_blank" rel="noopener" data-i18n="proj.c3h">Automação acadêmica com IA</a></h3>
+          <p class="meta" data-i18n="proj.c3m">Python · IA · PDF/Word</p>
+          <p data-i18n="proj.c3p">Lê atividades, gera conteúdo com IA, formata documentos e submete. Open source.</p>
         </article>
         <article class="card">
-          <h3><a href="https://github.com/Gabriel-Baldo/cambio-hoje" target="_blank" rel="noopener">Câmbio Hoje</a></h3>
-          <p class="meta">HTML · CSS · JS puro · BCB + CoinGecko</p>
-          <p>Conversor BRL ⇄ USD/EUR/BTC com cotação viva oficial (Banco Central + CoinGecko, sem chave). Projeto da disciplina Web 1 — 100% front estático no GitHub Pages.</p>
+          <h3><a href="https://github.com/Gabriel-Baldo/cambio-hoje" target="_blank" rel="noopener" data-i18n="proj.c4h">Conversor de moedas com cotação viva</a></h3>
+          <p class="meta" data-i18n="proj.c4m">HTML · CSS · JS puro · Dados oficiais</p>
+          <p data-i18n="proj.c4p">Conversor com cotação oficial do Banco Central, 100% front estático publicado na web.</p>
         </article>
-      </div>
-    </section>
-
-    <section id="fotos">
-      <h2>Em campo — Codengage 10 anos</h2>
-      <p>Evento de março/2026. Fotos otimizadas para web a partir dos originais de ~5&nbsp;MB.</p>
-      <div class="grid fotos">
-        <figure class="card foto"><img src="assets/img/hero.jpg" alt="Gabriel Baldo — retrato no painel Codengage 10 anos" loading="lazy"><figcaption>Retrato — painel 10 anos</figcaption></figure>
-        <figure class="card foto"><img src="assets/img/equipe.jpg" alt="Time Codengage reunido no evento de 10 anos" loading="lazy"><figcaption>O time</figcaption></figure>
-        <figure class="card foto"><img src="assets/img/momento.jpg" alt="Gabriel assinando o painel comemorativo Codengage 10 anos" loading="lazy"><figcaption>Assinando o painel</figcaption></figure>
       </div>
     </section>
 
     <section id="contato">
-      <h2>Contato</h2>
-      <p>Bora conversar sobre Rails, Spring, Next ou IA aplicada?</p>
+      <h2 data-i18n="cont.h2">Contato</h2>
+      <p data-i18n="cont.p">Bora conversar sobre Rails, Spring, Next ou IA aplicada?</p>
       <ul class="contato-lista">
         <li>GitHub: <a href="https://github.com/Gabriel-Baldo" target="_blank" rel="noopener">github.com/Gabriel-Baldo</a></li>
-        <li>E-mail: <a href="mailto:gabriel.k.baldo@gmail.com">gabriel.k.baldo@gmail.com</a> <button id="copiar-email" type="button">copiar</button></li>
-        <li>Faculdade: <a href="https://github.com/Gabriel-Baldo/cambio-hoje" target="_blank" rel="noopener">cambio-hoje</a> (Projeto 2 da disciplina Web 1)</li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/gabriel-karlinski-baldo/" target="_blank" rel="noopener">gabriel-karlinski-baldo</a></li>
+        <li><span data-i18n="cont.email">E-mail</span>: <a href="mailto:gabriel.k.baldo@gmail.com">gabriel.k.baldo@gmail.com</a> <button id="copiar-email" type="button" data-i18n="cont.copiar">copiar</button></li>
       </ul>
-      <h3>Mande uma mensagem</h3>
-      <p><small>Formulário de demonstração da disciplina — abre seu app de e-mail, sem servidor.</small></p>
+      <h3 data-i18n="cont.fh">Mande uma mensagem</h3>
       <form id="contato-form" action="mailto:gabriel.k.baldo@gmail.com" method="post" enctype="text/plain">
         <div>
-          <label for="f-nome">Nome:</label>
-          <input type="text" id="f-nome" name="nome" placeholder="Seu nome" required>
+          <label for="f-nome" data-i18n="cont.nome">Nome:</label>
+          <input type="text" id="f-nome" name="nome" required data-i18n-ph="cont.nomePh" placeholder="Seu nome">
         </div>
         <div>
-          <label for="f-email">E-mail:</label>
-          <input type="email" id="f-email" name="email" placeholder="voce@exemplo.com" required>
+          <label for="f-email" data-i18n="cont.email">E-mail:</label>
+          <input type="email" id="f-email" name="email" required data-i18n-ph="cont.emailPh" placeholder="voce@exemplo.com">
         </div>
         <div>
-          <label for="f-msg">Mensagem:</label>
-          <textarea id="f-msg" name="mensagem" rows="5" placeholder="O que você quer conversar?" required></textarea>
+          <label for="f-msg" data-i18n="cont.msg">Mensagem:</label>
+          <textarea id="f-msg" name="mensagem" rows="5" required data-i18n-ph="cont.msgPh" placeholder="Sobre o que quer conversar?"></textarea>
         </div>
-        <button class="btn primario" type="submit">Enviar</button>
+        <button class="btn primario" type="submit" data-i18n="cont.enviar">Enviar</button>
       </form>
     </section>
   </main>
 
   <footer>
-    <p>© <span id="ano">2026</span> Gabriel Baldo — feito em HTML/CSS/JS puro, sem build.</p>
+    <p>© <span id="ano">2026</span> Gabriel Baldo — <span data-i18n="footer.txt">feito em HTML/CSS/JS puro, sem build.</span></p>
   </footer>
 
   <script src="js/main.js"></script>

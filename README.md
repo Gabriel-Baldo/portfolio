@@ -1,24 +1,15 @@
-# portfolio — Gabriel Baldo
+# Gabriel Baldo — Dev Portfolio
 
-> **Aluno:** Gabriel Baldo · **Disciplina:** Programação para Web 1 (UTFPR), turma extra · **Atividade:** Projeto 1 — site pessoal (HTML → CSS → Mobile First responsivo).
-> **Site publicado:** https://Gabriel-Baldo.github.io/portfolio/ · **Etapa 1 (HTML puro):** https://Gabriel-Baldo.github.io/portfolio/etapa-1/
+Portfólio de desenvolvedor full-stack (Ruby on Rails, Java/Spring, Next.js/React, Python/IA). Estático puro — HTML/CSS/JS, sem build — com toggle PT/EN e deploy simples em qualquer hospedagem.
 
-Portfólio dev público (vai para um `.com`). Estático puro — HTML/CSS/JS, sem build — para deploy simples em qualquer hospedagem.
-
-> Este repo é o **Projeto 1 (site pessoal)** da disciplina Web 1 + portfólio carreira. O **Projeto 2 (Câmbio Hoje)** mora no repo [`cambio-hoje`](https://github.com/Gabriel-Baldo/cambio-hoje) — sem código de um dentro do outro.
-
-## Evolução por etapas (disciplina)
-
-- **Etapa 1 — HTML puro:** `etapa-1/index.html` (sem CSS/JS — verificado por grep; também marcada na tag `etapa-1-html-puro`). Nome, foto, Sobre, Formação, Experiências/Projetos, Habilidades, links, contato com `<form>`, navegação.
-- **Etapa 2 — CSS externo:** `css/style.css` (cores, tipografia, espaçamentos, bordas, links, formulário, hover).
-- **Etapa 3 — Mobile First:** base = telas pequenas (1 coluna, menu hamburger); `@media (min-width: 600px)` 2 colunas; `@media (min-width: 900px)` hero lado a lado + nav inline. Viewport configurado, sem larguras fixas, imagens com `max-width: 100%`. Evidência: DevTools em 375px / 768px / ≥1200px.
+**Site publicado:** https://Gabriel-Baldo.github.io/portfolio/
 
 ## Estrutura
 
-- `index.html` — conteúdo + SEO/OG
-- `css/style.css` — tema escuro, Mobile First, Flex/Grid
-- `js/main.js` — menu mobile, copiar e-mail (Clipboard API)
-- `assets/img/` — fotos do evento Codengage 10 anos (mar/2026), otimizadas (~150 KB cada, originais tinham ~5 MB)
+- `index.html` — conteúdo + SEO/OG, com atributos `data-i18n` (PT/EN via `js/main.js`)
+- `css/style.css` — tema escuro, Mobile First (`min-width: 600px/900px`), Flex/Grid
+- `js/main.js` — menu mobile, copiar e-mail, dicionário PT/EN com `localStorage`
+- `assets/img/hero.jpg` — foto otimizada para web (~180 KB)
 
 ## Rodar local
 
@@ -45,8 +36,12 @@ Opção B — Vercel/Netlify: importe o repo, output = raiz, sem build command.
 
 ## Fotos
 
-Originais: `~/Downloads/DSC01244.jpg` (hero), `DSC01716.jpg` (equipe), `DSC01914.jpg` (momento). Re-otimizar com:
+`assets/img/hero.jpg` — foto otimizada para web. Re-otimizar com:
 
 ```bash
 python3 -c "from PIL import Image; im=Image.open('orig.jpg').convert('RGB'); im.resize((1200,int(im.height*1200/im.width)),Image.LANCZOS).save('assets/img/x.jpg','JPEG',quality=78,optimize=True,progressive=True)"
 ```
+
+## Contexto acadêmico
+
+Este repo também é o Projeto 1 (site pessoal) da disciplina Programação para Web 1 (UTFPR): `etapa-1/index.html` é o snapshot em HTML puro (tag `etapa-1-html-puro`), e a versão principal evoluiu com CSS externo e layout Mobile First. O Projeto 2 (conversor de moedas) mora no repo [`cambio-hoje`](https://github.com/Gabriel-Baldo/cambio-hoje).
