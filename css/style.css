@@ -32,7 +32,7 @@ a:hover { text-decoration: underline; }
   border-bottom: 1px solid var(--borda);
   backdrop-filter: blur(6px);
 }
-.logo { font-weight: 800; font-size: 1.2rem; color: var(--texto); text-decoration: none; }
+.logo { font-weight: 800; font-size: 1rem; color: var(--texto); text-decoration: none; white-space: nowrap; }
 .logo:hover { text-decoration: none; }
 .logo span { color: var(--destaque); }
 #menu-btn {
@@ -135,6 +135,7 @@ footer { border-top: 1px solid var(--borda); text-align: center; color: var(--su
 /* Telas grandes: hero lado a lado + navegação inline */
 @media (min-width: 900px) {
   h2 { font-size: 1.6rem; }
+  .logo { font-size: 1.2rem; }
   .hero { grid-template-columns: 1.2fr .8fr; gap: 2rem; align-items: center; padding-top: 2.5rem; }
   #menu-btn { display: none; }
   #menu {
